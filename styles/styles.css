@@ -1,0 +1,140 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #19A1AD;
+  background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+  background-position: calc(50vw - 978px) calc( 50vh - 900px), 50vw 50vh;
+  background-repeat: no-repeat;
+}
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 375px;
+  width: 350px;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card__top {
+  height: 140px;
+  width: 100%;
+  background-image: url(../images/bg-pattern-card.svg);
+}
+
+.card__top--bg-position {
+  background-size: 120%;
+  background-position-x: -20px;
+}
+
+.card__footer {
+  height: 89px;
+  width: 100%;
+  border-top: solid 2px #E8E8E8;
+}
+
+.personal-data {
+  padding-top: 52.5px;
+  text-align: center;
+}
+
+.personal-data__name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.personal-data__age {
+  font-weight: 400;
+  color: #969696;
+}
+
+.personal-data__city {
+  font-size: 14px;
+  padding-top: 10px;
+  color: #969696;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__item {
+  text-align: center;
+  width: 60px;
+  margin: 0 20px;
+}
+
+.footer__number {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.footer__label {
+  color: #969696;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.icon {
+  position: absolute;
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.icon__card {
+  left: 122.5px;
+  top: 87.5px;
+}
+
+.icon__photo {
+  position: absolute;
+  z-index: 2;
+  top: 5px;
+  left: 5px;
+  height: 95px;
+  width: 95px;
+  border-radius: 50%;
+  background-image: url(../images/image-victor.jpg);
+}
+/*# sourceMappingURL=styles.css.map */

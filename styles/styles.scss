@@ -1,0 +1,136 @@
+$container-bg-color: #19A1AD;
+$card-bg-color: #fff;
+$bottom-hr-color: #E8E8E8;
+
+$font-color-grey: hsl(0, 0, 59%);
+
+$card-width: 350px;
+$card-top-height: 140px;
+
+$icon-side: 105px;
+$icon-photo-side: 95px;
+
+$half-of-card-width: $card-width / 2;
+$half-of-icon-side: $icon-side / 2;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $container-bg-color;
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-position: calc(50vw - 978px) calc( 50vh - 900px), 50vw 50vh;
+    background-repeat: no-repeat;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 375px;
+    width: 350px;
+    background-color: $card-bg-color;
+    border-radius: 15px;
+    overflow: hidden;
+
+    &__top {
+        height: $card-top-height;
+        width: 100%;
+        background-image: url(../images/bg-pattern-card.svg);
+        
+        &--bg-position {
+            background-size: 120%;
+            background-position-x: -20px;
+
+        }
+    }
+
+    &__footer {
+        height: 89px;
+        width: 100%;
+        border-top: solid 2px $bottom-hr-color;
+    }
+}
+
+.personal-data {
+    padding-top: $half-of-icon-side;
+    text-align: center;
+    
+    &__name{
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__age{
+        font-weight: 400;
+        color: $font-color-grey;
+    }
+
+    &__city {
+        font-size: 14px;
+        padding-top: 10px;
+        color: $font-color-grey;
+    }
+
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__item {
+        text-align: center;
+        width: 60px;
+        margin: 0 20px;
+    }
+
+    &__number {
+        font-size: 18px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    &__label {
+        color: $font-color-grey;
+        font-size: 10px;
+        letter-spacing:  0.15em;
+    }
+}
+
+.icon {
+    position: absolute;
+    width: $icon-side;
+    height: $icon-side;
+    border-radius: 50%;
+    background-color: $card-bg-color;
+    
+    &__card {
+        left: $half-of-card-width - $half-of-icon-side;
+        top:  $card-top-height - $half-of-icon-side;
+    }
+
+    &__photo {  
+        position: absolute;
+        z-index: 2;
+        top: ($icon-side - $icon-photo-side) / 2 ;
+        left: ($icon-side - $icon-photo-side) / 2 ;
+        height: $icon-photo-side;
+        width: $icon-photo-side;
+        border-radius: 50%;
+        background-image: url(../images/image-victor.jpg);
+    }
+}
